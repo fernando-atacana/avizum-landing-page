@@ -34,7 +34,7 @@ export default function AIVisualization() {
   ]
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div className="relative w-full h-full bg-gray-800">
       <svg
         viewBox="0 0 800 600"
         className="w-full h-full"
