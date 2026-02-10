@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Avizum - AI-Powered Pharma Competitive Intelligence',
-  description: 'Transform pharmaceutical competitive intelligence with AI-driven data insights and analytics',
+  title: 'Avizum - For Foresight | AI-Powered Competitive Intelligence',
+  description: 'Avizum lives at the intersection of human purpose and artificial intelligence. Founded by Atacana, we democratize access to the power of knowing through our AICI platform.',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

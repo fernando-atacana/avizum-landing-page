@@ -26,7 +26,7 @@ export default function CTA() {
             </span>
           </h2>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            Join leading pharmaceutical companies leveraging AI to gain
+            Join leading companies leveraging AI to gain
             competitive advantage. Start your free trial today.
           </p>
 

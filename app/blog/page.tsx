@@ -9,22 +9,22 @@ import Link from 'next/link'
 const blogPosts = [
   {
     id: 1,
-    title: 'How AI is Transforming Pharmaceutical Competitive Intelligence',
-    excerpt: 'Discover how artificial intelligence is revolutionizing the way pharmaceutical companies analyze competitive landscapes and make strategic decisions.',
+    title: 'How AI is Transforming Competitive Intelligence',
+    excerpt: 'Discover how artificial intelligence is revolutionizing the way companies analyze competitive landscapes and make strategic decisions.',
     date: '2024-01-15',
-    slug: 'ai-transforming-pharma-competitive-intelligence',
+    slug: 'ai-transforming-competitive-intelligence',
   },
   {
     id: 2,
-    title: 'The Future of Market Research in Pharma: A Data-Driven Approach',
-    excerpt: 'Explore how data-driven market research is reshaping the pharmaceutical industry and enabling faster, more accurate insights.',
+    title: 'The Future of Market Research: A Data-Driven Approach',
+    excerpt: 'Explore how data-driven market research is reshaping industries and enabling faster, more accurate insights.',
     date: '2024-01-10',
-    slug: 'future-market-research-pharma',
+    slug: 'future-market-research-data-driven',
   },
   {
     id: 3,
-    title: 'Competitive Intelligence Best Practices for Pharmaceutical Companies',
-    excerpt: 'Learn the essential strategies and best practices for building an effective competitive intelligence program in the pharmaceutical sector.',
+    title: 'Competitive Intelligence Best Practices for Modern Organizations',
+    excerpt: 'Learn the essential strategies and best practices for building an effective competitive intelligence program.',
     date: '2024-01-05',
     slug: 'competitive-intelligence-best-practices',
   },
@@ -46,7 +46,7 @@ export default function BlogPage() {
               Blog
             </h1>
             <p className="text-xl text-gray-300 mb-12">
-              Insights, updates, and thought leadership on competitive intelligence and AI in pharmaceuticals.
+              Insights, updates, and thought leadership on competitive intelligence and AI.
             </p>
 
             <div className="space-y-8">

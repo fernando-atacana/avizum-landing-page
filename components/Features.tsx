@@ -62,8 +62,8 @@ export default function Features() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to stay ahead in the competitive pharmaceutical
-            landscape.
+            Everything you need to stay ahead in the competitive
+            intelligence landscape.
           </p>
         </motion.div>
 
