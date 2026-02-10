@@ -6,7 +6,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Avizum - AI-Powered Pharma Competitive Intelligence',
-  description: 'Transform pharmaceutical competitive intelligence with AI-driven data insights and analytics.',
+  description: 'Transform pharmaceutical competitive intelligence with AI-driven data insights and analytics',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
