@@ -28,14 +28,17 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+          {/* Logo – white-background version so it stands out on nav */}
+          <Link
+            href="/"
+            className="flex items-center rounded-lg bg-white px-4 py-2.5 mt-2 shadow-sm transition-shadow hover:shadow-md"
+          >
             <Image
-              src="/avizum-logo-transparent.png"
+              src="/avizum-logo-white-bg.png"
               alt="AVIZUM Logo"
-              width={150}
-              height={50}
-              className="h-10 w-auto"
+              width={210}
+              height={70}
+              className="h-14 w-auto"
               priority
             />
           </Link>

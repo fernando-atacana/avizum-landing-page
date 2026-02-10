@@ -1,6 +1,6 @@
 # Avizum Landing Page
 
-A modern, professional landing page for Avizum - an AI-powered pharmaceutical competitive intelligence platform.
+A modern, professional landing page for Avizum - an AI-powered competitive intelligence platform.
 
 ## Features
 
@@ -57,15 +57,16 @@ avizum-landing-page/
 ├── app/
 │   ├── layout.tsx       # Root layout
 │   ├── page.tsx         # Home page
+│   ├── about/           # About us page
+│   ├── blog/            # Blog page
+│   ├── contact/         # Contact page
 │   └── globals.css      # Global styles
 ├── components/
 │   ├── Navigation.tsx   # Navigation bar
 │   ├── Hero.tsx         # Hero section
-│   ├── Features.tsx     # Features section
-│   ├── Benefits.tsx     # Benefits section
-│   ├── UseCases.tsx     # Use cases section
-│   ├── CTA.tsx          # Call-to-action section
-│   └── Footer.tsx       # Footer
+│   ├── Footer.tsx       # Footer
+│   ├── WaitlistModal.tsx # Waitlist modal
+│   └── ContactModal.tsx # Contact modal
 └── public/              # Static assets
 ```
 

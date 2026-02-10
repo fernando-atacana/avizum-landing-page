@@ -102,7 +102,7 @@ export default function Benefits() {
                 Ready to Transform Your Intelligence Operations?
               </h3>
               <p className="text-gray-600 mb-6">
-                Join leading pharmaceutical companies using Avizum to gain
+                Join leading companies using Avizum to gain
                 competitive advantage.
               </p>
               <motion.button
