@@ -169,7 +169,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                       htmlFor="awf_field-118541117"
                       className="mb-3 block text-xs font-semibold uppercase tracking-[0.12em] text-gray-300"
                     >
-                      Law Firm Website *
+                      Company Website *
                     </label>
                     <input
                       id="awf_field-118541117"
@@ -177,7 +177,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                       name="custom Company Website"
                       required
                       className="w-full rounded-lg border border-gray-800 bg-[#0c1019] px-4 py-3 text-lg text-gray-100 outline-none transition-all placeholder:text-gray-500 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30"
-                      placeholder="Enter Law Firm Website"
+                      placeholder="Enter Company Website"
                     />
                   </div>
 
