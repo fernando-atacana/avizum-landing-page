@@ -41,10 +41,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:info@avizum.com"
+                    href="mailto:info@avizum.ai"
                     className="text-primary-400 hover:text-primary-300"
                   >
-                    info@avizum.com
+                    info@avizum.ai
                   </a>
                 </div>
 
