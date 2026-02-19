@@ -204,7 +204,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   className="mt-8 inline-flex items-center gap-2 rounded-xl border border-gray-700 bg-gray-900 px-7 py-3 text-xl font-semibold text-gray-100 transition-colors hover:border-gray-500 hover:bg-gray-800"
                 >
                   Submit Form
-                  <span aria-hidden="true">-></span>
+                  <span aria-hidden="true">{'->'}</span>
                 </button>
               </form>
             </div>
