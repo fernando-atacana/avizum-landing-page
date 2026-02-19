@@ -15,7 +15,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-[calc(100vh-210px)] lg:min-h-[calc(100vh-230px)] flex items-center justify-center overflow-hidden bg-gray-900">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(14,165,233,0.1),transparent_50%)]" />
@@ -76,7 +76,7 @@ export default function Hero() {
           </div>
         )}
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
@@ -113,7 +113,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative hidden lg:block"
             >
-              <div className="relative w-full h-[600px]">
+              <div className="relative w-full h-[min(52vh,600px)] min-h-[320px]">
                 {/* AI Visualization */}
                 <div className="absolute inset-0 bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
                   <AIVisualization />
