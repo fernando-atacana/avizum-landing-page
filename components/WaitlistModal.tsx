@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 
 const AWEBER_FORM_ACTION = 'https://www.aweber.com/scripts/addlead.pl'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://avizum.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://avizum.ai'
 const WAITLIST_CONFIRMATION_REDIRECT = `${SITE_URL}/waitlist/confirmed`
 
 interface WaitlistModalProps {
