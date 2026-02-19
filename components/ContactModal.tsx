@@ -59,10 +59,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     Email
                   </h3>
                   <a
-                    href="mailto:contact@avizum.com"
+                    href="mailto:info@avizum.com"
                     className="text-primary-400 hover:text-primary-300"
                   >
-                    contact@avizum.com
+                    info@avizum.com
                   </a>
                 </div>
 
