@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const AWEBER_FORM_ACTION = 'https://www.aweber.com/scripts/addlead.pl'
-const AWEBER_CONFIRMATION_REDIRECT = '/waitlist/confirmed'
+const AWEBER_CONFIRMATION_REDIRECT = 'https://www.avizum.ai/waitlist/confirmed'
 
 interface WaitlistModalProps {
   isOpen: boolean
