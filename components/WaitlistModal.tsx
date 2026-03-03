@@ -186,9 +186,9 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   </button>
                 </div>
                 <p className="max-w-3xl text-lg text-gray-300">
-                  By submitting this form, your firm will join our waitlist to get
-                  early access to Avizum. When your firm has been selected, we
-                  will reach out to set up a demo.
+                  By submitting this form, you will join our waitlist to get early
+                  access to Avizum. When you have been selected, we will reach out
+                  to set up a demo.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
                   Required *
