@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const LINKS = [
-  { href: '/about', label: 'About us' },
+  { href: '/#about', label: 'About us' },
   { href: '/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact us' },
 ]

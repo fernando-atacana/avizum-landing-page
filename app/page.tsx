@@ -7,6 +7,7 @@ import TrustStrip from '@/components/TrustStrip'
 import HowItWorks from '@/components/HowItWorks'
 import UseCases from '@/components/UseCases'
 import Features from '@/components/Features'
+import About from '@/components/About'
 import Contact from '@/components/Contact'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
@@ -24,6 +25,7 @@ export default function Home() {
       <HowItWorks />
       <UseCases />
       <Features />
+      <About />
       <Contact />
       <CTA onJoinWaitlist={openWaitlist} />
       <Footer />
