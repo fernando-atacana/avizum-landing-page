@@ -7,7 +7,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        // Designer palette for the Avizum landing redesign
+        avz: {
+          bg: '#0A0E16',
+          surface: '#0B1426',
+          deep: '#06080d',
+          line: '#1C2C4A',
+          ink: '#FAFAF8',
+          muted: '#97A3B6',
+          faint: '#4A5567',
+          blue: '#3D7DFF',
+          cyan: '#39C8F5',
+          sky: '#6FB6FF',
+          steel: '#8AB3EC',
+          royal: '#1562CE',
+        },
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -36,6 +55,9 @@ module.exports = {
       animation: {
         'gradient': 'gradient 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
+        'avz-float': 'avzFloat 5s ease-in-out infinite',
+        'avz-pulse': 'avzPulse 2.8s ease-in-out infinite',
+        'avz-dash': 'avzDash 3s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -51,6 +73,17 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        avzFloat: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        avzPulse: {
+          '0%, 100%': { opacity: '0.45', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.35)' },
+        },
+        avzDash: {
+          to: { 'stroke-dashoffset': '-40' },
         },
       },
     },

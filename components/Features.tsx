@@ -1,102 +1,108 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
-const features = [
+const FEATURES = [
   {
-    icon: '🤖',
-    title: 'AI-Powered Analysis',
-    description:
-      'Advanced machine learning algorithms process millions of data points to deliver actionable insights in real-time.',
+    color: '#39C8F5',
+    bg: 'rgba(57,200,245,.14)',
+    border: 'rgba(57,200,245,.3)',
+    title: 'Real-time monitoring',
+    body: 'Always-on watch across thousands of pharma sources.',
+    icon: <path d="M22 12h-4l-3 9L9 3l-3 9H2" />,
   },
   {
-    icon: '📊',
-    title: 'Real-Time Dashboards',
-    description:
-      'Monitor competitive landscape with customizable dashboards that update automatically as new data arrives.',
+    color: '#6FB6FF',
+    bg: 'rgba(61,125,255,.14)',
+    border: 'rgba(61,125,255,.3)',
+    title: 'AI synthesis',
+    body: 'Plain-language summaries you can act on instantly.',
+    icon: (
+      <>
+        <path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z" />
+        <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z" />
+      </>
+    ),
   },
   {
-    icon: '🔍',
-    title: 'Deep Market Intelligence',
-    description:
-      'Comprehensive coverage of clinical trials, regulatory filings, market trends, and competitor strategies.',
+    color: '#6FB6FF',
+    bg: 'rgba(111,182,255,.14)',
+    border: 'rgba(111,182,255,.3)',
+    title: 'Pipeline & trial tracking',
+    body: 'Follow every program from preclinical to launch.',
+    icon: (
+      <>
+        <path d="M9 3v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 9.5V3" />
+        <path d="M8 3h8" />
+        <path d="M7.5 14h9" />
+      </>
+    ),
   },
   {
-    icon: '⚡',
-    title: 'Lightning-Fast Search',
-    description:
-      'Find exactly what you need in seconds with our powerful search engine powered by natural language processing.',
-  },
-  {
-    icon: '🔒',
-    title: 'Enterprise Security',
-    description:
-      'Bank-level encryption and compliance with HIPAA, GDPR, and other regulatory requirements.',
-  },
-  {
-    icon: '📈',
-    title: 'Predictive Analytics',
-    description:
-      'Forecast market trends and competitor moves with AI-driven predictive models and scenario planning.',
+    color: '#8AB3EC',
+    bg: 'rgba(138,179,236,.14)',
+    border: 'rgba(138,179,236,.3)',
+    title: 'Smart alerts & briefings',
+    body: 'Only what matters, delivered when it matters.',
+    icon: (
+      <>
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+        <path d="M13.7 21a2 2 0 0 1-3.4 0" />
+      </>
+    ),
   },
 ]
 
 export default function Features() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-
   return (
-    <section id="features" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Powerful Features for{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              Modern Intelligence
-            </span>
+    <section id="features" className="bg-avz-bg px-6 py-24 sm:px-10">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto mb-14 max-w-[680px] text-center">
+          <div className="mb-4 font-display text-xs font-semibold uppercase tracking-[0.24em] text-avz-royal">
+            What you get
+          </div>
+          <h2 className="font-display text-4xl font-bold leading-tight tracking-[-0.01em] text-avz-ink sm:text-[42px]">
+            Intelligence, the moment it breaks
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to stay ahead in the competitive
-            intelligence landscape.
-          </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {FEATURES.map((feature, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
+              key={feature.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
-              className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-                hoveredIndex === index
-                  ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-accent-50 shadow-xl scale-105'
-                  : 'border-gray-200 bg-white hover:border-primary-200 hover:shadow-lg'
-              }`}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="rounded-[14px] border border-avz-line bg-avz-surface p-7"
             >
-              <div className="text-5xl mb-4">{feature.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <div
+                className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-[11px]"
+                style={{
+                  background: feature.bg,
+                  border: `1px solid ${feature.border}`,
+                  color: feature.color,
+                }}
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {feature.icon}
+                </svg>
+              </div>
+              <h3 className="mb-2 font-display text-[17px] font-bold leading-snug text-avz-ink">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
+              <p className="text-sm leading-relaxed text-avz-muted">
+                {feature.body}
               </p>
-              {hoveredIndex === index && (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="absolute top-4 right-4 w-3 h-3 bg-primary-500 rounded-full"
-                />
-              )}
             </motion.div>
           ))}
         </div>
