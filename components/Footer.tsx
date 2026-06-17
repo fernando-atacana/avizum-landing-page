@@ -6,12 +6,12 @@ import Image from 'next/image'
 const LINKS = [
   { href: '/about', label: 'About us' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact us' },
+  { href: '/#contact', label: 'Contact us' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="border-t border-avz-line/50 bg-black px-6 py-12 sm:px-10">
+    <footer className="border-t border-avz-line/30 bg-avz-deep px-6 py-12 sm:px-10">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <Link

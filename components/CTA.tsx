@@ -10,16 +10,8 @@ export default function CTA({ onJoinWaitlist }: CTAProps) {
   return (
     <section
       id="waitlist"
-      className="relative overflow-hidden bg-avz-deep px-6 py-24 text-center sm:px-10 sm:py-28"
+      className="relative overflow-hidden bg-avz-bg px-6 py-24 text-center sm:px-10 sm:py-28"
     >
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(700px 420px at 50% 0%, rgba(61,125,255,.26), transparent 62%)',
-        }}
-      />
-
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

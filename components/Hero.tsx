@@ -22,23 +22,27 @@ const FLOATING_CARDS = [
     tagColor: '#39C8F5',
     title: 'Competitor hits primary endpoint',
     position: 'left-[-7%] top-[8%]',
-    duration: 5,
+    delay: 0,
   },
   {
     tag: 'New filing',
     tagColor: '#6FB6FF',
     title: 'FDA submission detected',
     position: 'right-[-6%] top-[36%]',
-    duration: 6,
+    delay: 3,
   },
   {
     tag: 'Label update',
     tagColor: '#3D7DFF',
     title: 'Indication expanded',
     position: 'left-[6%] bottom-[-7%]',
-    duration: 5.5,
+    delay: 6,
   },
 ]
+
+// One notification is visible roughly every 3s, looping like a live feed.
+const CARD_VISIBLE = 4.5
+const CARD_GAP = 4.5
 
 export default function Hero({ onJoinWaitlist }: HeroProps) {
   return (
@@ -134,31 +138,46 @@ export default function Hero({ onJoinWaitlist }: HeroProps) {
             />
           </div>
 
-          {/* Pulsing nodes */}
+          {/* Pulsing nodes — outer span centers the dot on the line endpoint,
+              inner span owns the pulse animation so transforms don't clash */}
           {NODES.map((node, i) => (
             <span
               key={i}
-              className="absolute rounded-full animate-avz-pulse"
-              style={{
-                left: node.left,
-                top: node.top,
-                width: node.size,
-                height: node.size,
-                background: node.color,
-                boxShadow: `0 0 16px 2px ${node.color}b3`,
-                animationDelay: node.delay,
-              }}
-            />
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: node.left, top: node.top }}
+            >
+              <span
+                className="block rounded-full animate-avz-pulse"
+                style={{
+                  width: node.size,
+                  height: node.size,
+                  background: node.color,
+                  boxShadow: `0 0 16px 2px ${node.color}b3`,
+                  animationDelay: node.delay,
+                }}
+              />
+            </span>
           ))}
 
-          {/* Floating insight cards */}
+          {/* Floating insight cards — pop in then slowly fade out, like a feed */}
           {FLOATING_CARDS.map((card) => (
-            <div
+            <motion.div
               key={card.tag}
               className={`absolute z-[2] rounded-xl border border-avz-line bg-avz-surface/90 px-4 py-3 backdrop-blur-sm ${card.position}`}
-              style={{
-                animation: `avzFloat ${card.duration}s ease-in-out infinite`,
-                boxShadow: '0 14px 32px -14px rgba(0,0,0,.65)',
+              style={{ boxShadow: '0 14px 32px -14px rgba(0,0,0,.65)' }}
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.8, 1.04, 1, 0.96],
+                y: [10, 0, 0, -6],
+              }}
+              transition={{
+                duration: CARD_VISIBLE,
+                times: [0, 0.12, 0.7, 1],
+                ease: 'easeOut',
+                repeat: Infinity,
+                repeatDelay: CARD_GAP,
+                delay: card.delay,
               }}
             >
               <div
@@ -170,7 +189,7 @@ export default function Hero({ onJoinWaitlist }: HeroProps) {
               <div className="mt-1.5 text-sm font-semibold leading-snug text-avz-ink">
                 {card.title}
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

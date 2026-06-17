@@ -1,7 +1,7 @@
 'use client'
 
 const ITEMS = [
-  'Real-time',
+  'Ahead of time',
   'Pharma-specific',
   'Decision-ready',
   'Always-on monitoring',
