@@ -2,103 +2,103 @@
 
 import { motion } from 'framer-motion'
 
-const useCases = [
+const USE_CASES = [
   {
-    title: 'Clinical Trial Intelligence',
-    description:
-      'Track competitor clinical trials, identify gaps in the market, and discover partnership opportunities.',
-    icon: '🧪',
-    color: 'from-blue-500 to-cyan-500',
+    gradient: 'from-avz-blue to-avz-cyan',
+    title: 'Competitive Intelligence',
+    body: "Track every competitor's pipeline, trials and strategic moves in one always-current view.",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="12" cy="12" r="4.5" />
+        <circle cx="12" cy="12" r="0.6" fill="currentColor" />
+      </>
+    ),
   },
   {
-    title: 'Regulatory Monitoring',
-    description:
-      'Stay updated on FDA approvals, regulatory changes, and compliance requirements across markets.',
-    icon: '📋',
-    color: 'from-purple-500 to-pink-500',
+    gradient: 'from-avz-cyan to-avz-sky',
+    title: 'Medical Affairs',
+    body: 'Surface the latest publications, readouts and KOL activity the day they land — never miss the evidence.',
+    icon: (
+      <>
+        <path d="M20.8 12.3a5 5 0 0 0-9-3.5 5 5 0 0 0-9 3.5c0 4.4 9 8.7 9 8.7s9-4.3 9-8.7z" />
+        <path d="M3.5 12.5h4l1.5-3 2.5 6 1.5-3h4" />
+      </>
+    ),
   },
   {
-    title: 'Market Analysis',
-    description:
-      'Analyze market trends, pricing strategies, and competitive positioning in real-time.',
-    icon: '📊',
-    color: 'from-green-500 to-emerald-500',
+    gradient: 'from-avz-royal to-avz-blue',
+    title: 'Commercial & Brand',
+    body: 'Anticipate launches, label changes and market shifts to keep your brand strategy a step ahead.',
+    icon: (
+      <>
+        <path d="M3 20h18" />
+        <path d="M6 20v-6" />
+        <path d="M11 20V9" />
+        <path d="M16 20v-4" />
+        <path d="M21 20V5" />
+        <path d="M5 11l5-5 3 3 6-6" />
+      </>
+    ),
   },
   {
-    title: 'Competitor Tracking',
-    description:
-      'Monitor competitor activities, product launches, and strategic moves with automated alerts.',
-    icon: '👁️',
-    color: 'from-orange-500 to-red-500',
+    gradient: 'from-avz-sky to-avz-blue',
+    title: 'R&D & Pipeline scouting',
+    body: 'Spot emerging science, modalities and partnering opportunities before they hit the mainstream.',
+    icon: (
+      <>
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="M20 20l-4.7-4.7" />
+      </>
+    ),
   },
 ]
 
 export default function UseCases() {
   return (
-    <section id="use-cases" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Use Cases for{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              Every Team
-            </span>
+    <section id="use-cases" className="bg-avz-deep px-6 py-24 sm:px-10">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto mb-14 max-w-[720px] text-center">
+          <div className="mb-4 font-display text-xs font-semibold uppercase tracking-[0.24em] text-avz-royal">
+            Who it&apos;s for
+          </div>
+          <h2 className="font-display text-4xl font-bold leading-tight tracking-[-0.01em] text-avz-ink sm:text-[42px]">
+            Built for every team that can&apos;t afford to be second
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From R&D to commercial strategy, Avizum powers intelligence across
-            your organization.
-          </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {useCases.map((useCase, index) => (
+        <div className="mx-auto grid max-w-[980px] gap-6 md:grid-cols-2">
+          {USE_CASES.map((useCase, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
+              key={useCase.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl bg-white border-2 border-gray-200 hover:border-primary-300 transition-all duration-300"
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
+              className="flex gap-5 rounded-2xl border border-avz-line bg-avz-surface p-8"
             >
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${useCase.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-              />
-              <div className="relative p-8">
-                <div className="text-6xl mb-6">{useCase.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                className={`flex h-[46px] w-[46px] flex-none items-center justify-center rounded-full bg-gradient-to-r text-white ${useCase.gradient}`}
+                style={{ boxShadow: '0 0 24px -4px rgba(57,200,245,.6)' }}
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {useCase.icon}
+                </svg>
+              </div>
+              <div>
+                <h3 className="mb-2 font-display text-lg font-bold leading-snug text-avz-ink">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {useCase.description}
-                </p>
-                <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                  className="mt-6 flex items-center text-primary-600 font-semibold"
-                >
-                  Learn more
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </motion.div>
+                <p className="leading-relaxed text-avz-muted">{useCase.body}</p>
               </div>
             </motion.div>
           ))}

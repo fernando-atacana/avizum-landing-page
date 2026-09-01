@@ -1,36 +1,46 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
+
+const LINKS = [
+  { href: '/#about', label: 'About us' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contact', label: 'Contact us' },
+]
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+    <footer className="border-t border-avz-line/30 bg-avz-deep px-6 py-12 sm:px-10">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="flex flex-wrap items-center justify-between gap-6">
           <Link
-            href="/about"
-            className="text-gray-300 hover:text-white transition-colors font-medium"
+            href="/"
+            className="flex items-center rounded-lg bg-white px-3 py-2 shadow-sm"
           >
-            About us
+            <Image
+              src="/avizum-logo-white-bg.png"
+              alt="AVIZUM"
+              width={160}
+              height={54}
+              className="h-9 w-auto"
+            />
           </Link>
-          <Link
-            href="/blog"
-            className="text-gray-300 hover:text-white transition-colors font-medium"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-300 hover:text-white transition-colors font-medium"
-          >
-            Contact us
-          </Link>
+          <div className="flex flex-wrap gap-9">
+            {LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[15px] font-semibold text-avz-muted transition-colors hover:text-avz-ink"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Avizum. All rights reserved.
-          </p>
+        <div className="mt-8 border-t border-avz-line/50 pt-6 text-center text-[13px] text-avz-faint">
+          © {new Date().getFullYear()} Avizum. All rights reserved.
         </div>
       </div>
     </footer>
